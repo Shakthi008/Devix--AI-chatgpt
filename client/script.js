@@ -44,7 +44,7 @@ function chatstripe(isAi, value, uniqueId) {
     <div class="wrapper ${isAi ? 'ai' : ''}">
       <div class="chat">
         <div class="profile">
-          <img src="${isAi ? 'bot.jpg' : 'user.jpg'}" 
+          <img src="${isAi ? 'public/bot.jpg' : 'public/user.jpg'}" 
               alt="${isAi ? 'bot' : 'user'}" />
         </div>
         <div class="message" id="${uniqueId}">${value}</div>
@@ -73,7 +73,7 @@ const handlesubmit = async (e) => {
 
   loader(messageDiv)
 
-  const response = await fetch('https://devix.onrender.com/', {
+  const response = await fetch(server_backend, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
