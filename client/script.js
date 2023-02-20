@@ -44,7 +44,7 @@ function chatstripe(isAi, value, uniqueId) {
     <div class="wrapper ${isAi ? 'ai' : ''}">
       <div class="chat">
         <div class="profile">
-          <img src="${isAi ? 'public/bot.jpg' : 'public/user.jpg'}" 
+          <img src="${isAi ? 'bot.jpg' : 'user.jpg'}" 
               alt="${isAi ? 'bot' : 'user'}" />
         </div>
         <div class="message" id="${uniqueId}">${value}</div>
